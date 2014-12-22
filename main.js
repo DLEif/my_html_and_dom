@@ -1,9 +1,11 @@
 function checkform(){
-  // var score = 0;
+  var score = 0;
   var inputs = Question.all();
+//  console.log(inputs);
   _.forEach(inputs, function(input){
-    var inputAnswers = document.getElementsByName(question.name);
-    score += question.countScore(anwser);
+    var inputAnswers = document.getElementsByName(input.topicName);
+    //console.log(inputAnswers);
+    score += input.countScore(inputAnswers);
   });
 
   var requiredInputs = [
@@ -29,10 +31,10 @@ function checkform(){
   return false;
 }
 
-function requiredInput(inputs) {
+function requiredInput(requiredInputs) {
 
-  for (var i = 0; i < inputs.length; i++) {
-    var input = inputs[i];
+  for (var i = 0; i < requiredInputs.length; i++) {
+    var input = requiredInputs[i];
     var element = document.getElementById(input.id);
     if (element && _.isEmpty(element.value)) {
       alert('请输入您的：' + input.text + '！');
