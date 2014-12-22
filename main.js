@@ -1,7 +1,6 @@
 function checkform(){
   // var score = 0;
-
-  var inputs = buildTopics();
+  var inputs = Question.all();
   _.forEach(inputs, function(input){
     var inputAnswers = document.getElementsByName(question.name);
     score += question.countScore(anwser);

@@ -5,22 +5,24 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
   <title>统一建模语言理论测试</title>
   <script type="text/javascript" src="main.js" ></script>
-  <script type="text/javascript" src="lian/buildTopics.js" ></script>
-  <script type="text/javascript" src="lian/MultipleChoiceTopic.js" ></script>
-  <script type="text/javascript" src="lian/TrueOrFalseTopic.js" ></script>
-  <script type="text/javascript" src="lian/shortAnswerTopic.js" ></script>
-  <script type="text/javascript" src="lian/choiceTopic.js" ></script>
-  <script type="text/javascript" src="lian/fillInTopic.js" ></script>
+  <script type="text/javascript" src="model/question.js" ></script>
+  <script type="text/javascript" src="model/buildTopics.js" ></script>
+  <script type="text/javascript" src="model/MultipleChoiceTopic.js" ></script>
+  <script type="text/javascript" src="model/TrueOrFalseTopic.js" ></script>
+  <script type="text/javascript" src="model/shortAnswerTopic.js" ></script>
+  <script type="text/javascript" src="model/choiceTopic.js" ></script>
+  <script type="text/javascript" src="model/fillInTopic.js" ></script>
   <script type="text/javascript" src="lib/lodash-2.4.1/lodash.js" ></script>
   <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
   <script type="text/javascript" src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
   <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/CSS/style.css">
   <title>
     test-paper
   </title>
 </head>
   <body>
-    <div class="panel panel-default">
+    <div class="panel panel-default style">
       <form action="" method="post" autocomplete="off">
         <header>
           <div class="panel panel-default text-center">
@@ -34,13 +36,13 @@
                 得分：<u><span id="count"></span></u>
               </p>
             </div>
-            <div class="text-dange">
+            <div class="text-dange ">
               班级：<label for="class" ></label>
-              <input type="text" style="border-color:#00CACA" id="class" size="17px" class="form-control"/>
+              <input type="text" id="class" size="17px" class="form-control"/>
               学号：<label for="id"></label>
-              <input type="text" style="border-color:#00CACA" id="id" size="17px" class="form-control"/>
+              <input type="text" id="id" size="17px" class="form-control"/>
               姓名：<label for="name"></label>
-              <input type="text" style="border-color:#00CACA" id="name" size="17px" class="form-control"/>
+              <input type="text" id="name" size="17px" class="form-control"/>
             </div>
           </div>
         </header>
@@ -59,7 +61,7 @@
             <div class="form-group">
               <label for="1_1">UML 的中文全称是：</label>
               <div class="form-inline">
-                <input type="text" style="border-color:#00CACA" id="1_1" name="1_1" size="30px" class="form-control"/>
+                <input type="text" id="1_1" name="1_1" size="30px" class="form-control"/>
               </div>
             </div>
           </li>
@@ -67,9 +69,9 @@
             <div class="form-group">
               <label for="1_2">对象最突出的特征是：</label>
               <div class="form-inline">
-                <input type='text' style="border-color:#00CACA" id='property1' name='1_2' size="12px" class="form-control" />、
-                <input type='text' style="border-color:#00CACA" id='property2' name='1_2' size="12px" class="form-control" />、
-                <input type='text' style="border-color:#00CACA" id='property3' name='1_2' size="12px" class="form-control" />。
+                <input type='text' id='property1' name='1_2' size="12px" class="form-control" />、
+                <input type='text' id='property2' name='1_2' size="12px" class="form-control" />、
+                <input type='text' id='property3' name='1_2' size="12px" class="form-control" />。
               </div>
             </div>
           </li>
