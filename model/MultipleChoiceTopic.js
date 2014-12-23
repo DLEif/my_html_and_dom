@@ -5,41 +5,20 @@ MultipleChoiceTopic.prototype = Object.create(Question.prototype);
 
 MultipleChoiceTopic.prototype.constructor = MultipleChoiceTopic;
 
-MultipleChoiceTopic.prototype.calculate = function (document) {
-// Promotion.getMoreSelete = function(moreSelete, answer, goal) {
-  var array = [];
-  // var score = 0;
-  var moreSeleteAnswer = inputAnswers();
+MultipleChoiceTopic.prototype.countScore = function (inputAnswers) {
 
-  _.forEach(moreSeleteAnswer, function(seleteAnswer) {
-    if (seleteAnswer.checked === true) {
-      array.push(seleteAnswer.value);
+  var score = 0;
+  var array = [];
+  var _this = this;
+  _.forEach(inputAnswers, function(inputAnswer) {
+    if (inputAnswer.checked === true) {
+      array.push(inputAnswer.value);
     }
   });
 
-  if (array.toString() === answer) {
-    score += goal;
+  if (array.toString() === _this.standardAnswer.toString()) {
+    score += _this.goal;
   }
 
   return score;
 };
-//
-//   var isDifferentArray = function (arrayA, arrayB) {
-//     var diffA = _.difference(arrayA, arrayB);
-//     var diffB = _.difference(arrayB, arrayA);
-//
-//     var diff = diffA.concat(diffB);
-//
-//     return _.isEmpty(diff);
-//   };
-//
-//   var checkboxElements = document.getElementsByName(this.name);
-//
-//   var checkedElements = _.filter(checkboxElements, { checked: true });
-//
-//   var answers = _.pluck(checkedElements, 'value');
-//
-//   var isCorrectAnswer = isDifferentArray(this.answer, answers);
-//
-//   this.score = isCorrectAnswer ? this.scoreUnit : 0;
-// };

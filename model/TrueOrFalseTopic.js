@@ -6,13 +6,14 @@ TrueOrFalseTopic.prototype = Object.create(Question.prototype);
 
 TrueOrFalseTopic.prototype.constructor = TrueOrFalseTopic;
 
-TrueOrFalseTopic.prototype.calculate = function(document) {
-  // var score = 0;
+TrueOrFalseTopic.prototype.countScore = function(inputAnswers) {
+  var score = 0;
   var judgeAnswers = inputAnswers();
-
+  var _this = this;
+  
   _.forEach(judgeAnswers, function(judgeAnswer){
     if (judgeAnswer.checked === true && judgeAnswer.value === answer) {
-      score = goal;
+      score = _this.goal;
     }
     return score;
   });
