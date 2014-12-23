@@ -11,7 +11,7 @@ Answer.buildTopics = function () {
   new MultipleChoiceTopic('3_2', ['A','B','C'], 10),
   new TrueOrFalseTopic('4_1', 'false', 10),
   new TrueOrFalseTopic('4_2', 'true', 10),
-  // new ShortAnswerTopic('5_1','模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种" +
-  // "表达形式。可以是物理实体;可以是某种图形;或者是一种数学表达式。', 20)
+  new ShortAnswerTopic('5_1','模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物' +
+  '或概念的一种表达形式。可以是物理实体;可以是某种图形;或者是一种数学表达式。', 10)
    ];
 };
